@@ -1,0 +1,80 @@
+// +-----------------------------------------------------------+
+//                     Mixin  Typographies
+// +-----------------------------------------------------------+
+
+@use "config" as *;
+
+// Définition des styles typographiques
+$typos: (
+  h1-g: (
+    font-size:
+      //use fluid typography calculator here to fit the size of the user's viewport
+    clamp(2.375rem, 0.886vw + 2.203rem, 3rem),
+    font-family: $font,
+    font-weight: 600,
+    text-align: left,
+    color: $black,
+    line-height: 0.96,
+    letter-spacing: -0.035em,
+  ),
+  h2-g: (
+    font-size:
+      clamp(0.875rem, 0.8089788732394366rem + 0.2816901408450704vw, 1.0625rem),
+    font-family: $font,
+    font-weight: bold,
+    text-align: left,
+    color: $black,
+    line-height: 0.96,
+    text-transform: uppercase,
+  ),
+  h2-d: (
+    letter-spacing: 0.35em,
+  ),
+  h2-m: (
+    letter-spacing: 0.42em,
+  ),
+  h3-g: (
+    font-family: $font,
+    font-weight: 400,
+    text-align: left,
+    line-height: 0.96,
+  ),
+  h3-d: (
+    color: $dark-gray,
+    font-size: 0.9375rem,
+    letter-spacing: 0.83em,
+  ),
+  h3-m: (
+    color: $black,
+    font-size: 1rem,
+    letter-spacing: 0.72em,
+  ),
+  p-g: (
+    font-family: $font,
+    font-weight: 400,
+    text-align: left,
+    line-height: 1.32,
+    letter-spacing: -0.01em,
+    font-size: 1rem,
+  ),
+  p-d: (
+    color: $dark-gray,
+  ),
+  p-m: (
+    color: $gray,
+  ),
+);
+
+// Mixin pour appliquer les styles typographiques
+@mixin typos($key) {
+  $styles: map-get($typos, $key);
+
+  font-size: map-get($styles, font-size);
+  font-family: map-get($styles, font-family);
+  font-weight: map-get($styles, font-weight);
+  text-align: map-get($styles, text-align);
+  color: map-get($styles, color);
+  line-height: map-get($styles, line-height);
+  letter-spacing: map-get($styles, letter-spacing);
+  text-transform: map-get($styles, text-transform);
+}
