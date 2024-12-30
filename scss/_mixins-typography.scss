@@ -9,7 +9,7 @@ $typos: (
   h1-g: (
     font-size:
       //use fluid typography calculator here to fit the size of the user's viewport
-    clamp(2.375rem, 0.886vw + 2.203rem, 3rem),
+    clamp(1rem, 0.886vw + 2.203rem, 3rem),
     font-family: $font,
     font-weight: 600,
     text-align: left,

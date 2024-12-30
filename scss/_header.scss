@@ -135,7 +135,7 @@ header {
 
 @media (min-width: 751px) {
   .logo svg {
-    top: 4rem;
+    top: 4rem !important;
     left: 4rem !important;
   }
   .header__burger-btn {
@@ -149,7 +149,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
-    top: 2.5rem;
+    top: 3.5rem;
     left: 4rem;
     width: 100vw;
     background-color: transparent;
